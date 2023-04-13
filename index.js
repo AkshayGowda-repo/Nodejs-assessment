@@ -1,9 +1,10 @@
 const {google} = require('googleapis');
 const readline = require('readline');
 const fs = require('fs');
+require('dotenv').config();
 
-const CLIENT_ID = '229540454095-p135cv9sa1f81mplok2vt5aos3j15o4d.apps.googleusercontent.com';
-const CLIENT_SECRET = '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';
+const CLIENT_ID = process.env.CLIENT_ID;
+const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const REDIRECT_URI = 'urn:ietf:wg:oauth:2.0:oob'; // Desktop app redirect URI
 const SCOPES = ['https://www.googleapis.com/auth/gmail.modify']; // Gmail API scopes
 
